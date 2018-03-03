@@ -115,7 +115,7 @@ const getWebpackConfig = (options = ({}), privateOptions = ({})) => {
             {
               loader: 'babel-loader',
               options: {
-                presets: ['es2015', 'stage-2'],
+                presets: ['env', 'stage-2'],
                 plugins: ['transform-runtime']
               }
             }
@@ -128,7 +128,7 @@ const getWebpackConfig = (options = ({}), privateOptions = ({})) => {
             {
               loader: 'babel-loader',
               options: {
-                presets: ['es2015', 'stage-2', 'react'].concat(isWebpackDevServer ? ['react-hmre'] : []),
+                presets: ['env', 'stage-2', 'react'].concat(isWebpackDevServer ? ['react-hmre'] : []),
                 plugins: ['transform-runtime']
               }
             }
